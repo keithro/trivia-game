@@ -1,0 +1,12 @@
+API
+
+Example:
+https://opentdb.com/api.php?amount=10&category=14&difficulty=easy&type=multiple
+
+Any:
+https://opentdb.com/api.php?amount=10
+
+Options:
+&category=
+&difficulty= easy, medium, hard
+&type= boolean, multiple
