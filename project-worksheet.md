@@ -94,7 +94,8 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Game logic: comparing user answer to correct answer and incrementing/decrementing score | H | 4hrs| hrs | hrs |
 | Displaying correct answer | H | 2hrs| hrs | hrs |
 | Rendering final game results (score, number of correct answers) | H | 2hrs| hrs | hrs |
-| Total | H | 27hrs| hrs | hrs |
+| Style and make responsive | H | 6hrs| hrs | hrs |
+| Total | H | 33hrs| hrs | hrs |
 
 #### Post MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
