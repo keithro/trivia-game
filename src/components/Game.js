@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Route, Link } from "react-router-dom";
 import Loader from './Loader';
+import Question from './Question';
 
 import "./Game.css";
 
@@ -12,9 +13,6 @@ const Game = (props) => {
 
   const { quizCategory, quizDifficulty } = props.userPreferences;
 
-  // FIXME: How can you make this work?
-  // const { type, difficulty, question, correct_answer } = quizData && quizData[counter];
-  // const answers = quizData && [correct_answer, ...quizData[counter].incorrect_answers];
   
   useEffect(() => {
     let url = "https://opentdb.com/api.php?amount=10";
@@ -27,11 +25,11 @@ const Game = (props) => {
   }, []);
 
   // RENDERING COMPONENTS
-  // If no questions: render loader
-  // If questions: play game/render question 1
+  // If no quizData: render loader
+  // If quizData: play game/render question 1
     // - "Loop" through array of questions:
     // - Start with question[0] 
-      // - if (question[counter]) {render question}
+      // - if (quizData[counter].question) {render question}
       // - Combine correct_answer and incorrect_answers into one array and shuffle answers
       // - render # of answers based on q.type (multi choice, true/false)
       // - wait for onClick event then:
@@ -41,29 +39,48 @@ const Game = (props) => {
   // If(counter > quizData.length)
     // - When done, display final score and results (# correct out of arr.length or counter)
 
-  const questionJSX = quizData[counter] ? (
-    <div>
-      <nav>
-        <Link to="/">Quit</Link>
-      </nav>
-      <main className="quiz">
-        <h1>Game</h1>
-        <h2>{quizData[counter].question}</h2>
-      </main>
-    </div>
-  ) : (
-    <main className="results">
-      <h1>Quiz Results</h1>
-    </main>
-  );
+    // FIXME: This should prob be: quizData.length > counter ?
+  // const questionJSX = quizData[counter] ? (
+  //   <div>
+  //     <nav>
+  //       <Link to="/">Quit</Link>
+  //     </nav>
+  //     <main className="quiz">
+  //       <h1>Game</h1>
+  //       <h2>{quizData[counter].question}</h2>
+  //     </main>
+  //   </div>
+  // ) : (
+  //   <main className="results">
+  //     <h1>Quiz Results</h1>
+  //   </main>
+  // );
+  // console.log(questionJSX);
+  
 
   return (
     <>
-      {/* FIXME: Should you move this logic for Loader inside the function above? */}
       {!quizData ? (
         <Loader />
+      ) : counter < quizData.length ? (
+        <div className="game">
+          <nav className="game-nav">
+            <h4>{score} Points</h4>
+            <Link to="/">Quit</Link>
+          </nav>
+          <main>
+            <Question
+              quizData={quizData}
+              counter={counter}
+              setCount={setCount}
+              score={score}
+              setScore={setScore}
+            />
+            {/* <h4>Current score: {score}</h4> */}
+          </main>
+        </div>
       ) : (
-        {questionJSX}
+        <h1>Results Page!</h1>
       )}
     </>
   );

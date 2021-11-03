@@ -110,8 +110,13 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
 
+
+The Durstenfeld shuffle I found on Stack Overflow to shuffle my answers array.
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
 }
 ```
