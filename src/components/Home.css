@@ -1,0 +1,39 @@
+.home {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .nav {
+  align-self: stretch;
+}
+
+.home h1 {
+  position: relative;
+  font-size: 4rem;
+  letter-spacing: .5rem;
+  margin: .8rem;
+  /* color: pink; */
+}
+
+.home span {
+  display: inline-block;
+}
+
+.home .tilt-right {
+  transform: rotate(10deg);
+}
+
+.home .tilt-left {
+  transform: rotate(-10deg);
+}
+
+.home .options-container {
+  width: 38rem;
+
+  display: flex;
+  flex-direction: column;
+}

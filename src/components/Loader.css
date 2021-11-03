@@ -1,0 +1,19 @@
+.loader h1 {
+  position: relative;
+  font-size: 4rem;
+  letter-spacing: .5rem;
+  margin: .8rem;
+  /* color: pink; */
+}
+
+.loader span {
+  display: inline-block;
+}
+
+.loader .tilt-right {
+  transform: rotate(10deg);
+}
+
+.loader .tilt-left {
+  transform: rotate(-10deg);
+}
