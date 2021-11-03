@@ -8,7 +8,7 @@ import "./Game.css";
 const Game = (props) => {
   // STATES: counter, quizData, score, streak
   const [quizData, setQuizData] = useState(null);
-  const [counter, setCount] = useState(0);
+  const [counter, setCounter] = useState(0);
   const [score, setScore] = useState(0);
 
   const { quizCategory, quizDifficulty } = props.userPreferences;
@@ -39,25 +39,6 @@ const Game = (props) => {
   // If(counter > quizData.length)
     // - When done, display final score and results (# correct out of arr.length or counter)
 
-    // FIXME: This should prob be: quizData.length > counter ?
-  // const questionJSX = quizData[counter] ? (
-  //   <div>
-  //     <nav>
-  //       <Link to="/">Quit</Link>
-  //     </nav>
-  //     <main className="quiz">
-  //       <h1>Game</h1>
-  //       <h2>{quizData[counter].question}</h2>
-  //     </main>
-  //   </div>
-  // ) : (
-  //   <main className="results">
-  //     <h1>Quiz Results</h1>
-  //   </main>
-  // );
-  // console.log(questionJSX);
-  
-
   return (
     <>
       {!quizData ? (
@@ -72,7 +53,7 @@ const Game = (props) => {
             <Question
               quizData={quizData}
               counter={counter}
-              setCount={setCount}
+              setCounter={setCounter}
               score={score}
               setScore={setScore}
             />
