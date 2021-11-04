@@ -1,9 +1,13 @@
 import {useState} from 'react';
 
-// import "./Question.css";
+import "./Question.css";
 
 const Question = (props) => {
-  const {counter, setCounter, score, setScore, streak, setStreak, correctCount, setCorrectCount, quizData} = props;
+  const [streak, setStreak] = useState(0);
+
+  // const {counter, setCounter, score, setScore, streak, setStreak, correctCount, setCorrectCount, quizData} = props;
+
+  const {counter, setCounter, score, setScore, correctCount, setCorrectCount, quizData} = props;
   const { category, type, difficulty, question, correct_answer, incorrect_answers } =quizData[counter];
   const answersArray = [correct_answer, ...incorrect_answers];
   const points = { easy: 100, medium: 200, hard: 300}
@@ -17,27 +21,61 @@ const Question = (props) => {
   shuffleArray(answersArray);
   
   // console.log(quizData);
-    console.log(correct_answer);
+  console.log(correct_answer);
 
-  const handleClick = (selectedAnswer) => {
+  const handleClick = (selectedAnswer, e) => {
+    // console.log(e.target.parentElement.className);
     // console.log(selectedAnswer);
     // console.log(correct_answer);
 
+    // NEW CODE WITH TIMER
     if(selectedAnswer === correct_answer) {
-      setScore(score + points[difficulty]);
-      setStreak(streak + 1);
-      setCorrectCount(correctCount + 1);
+      // Set active state first
+      e.target.parentElement.className = "answer correct";
+      // Then try timeout function to set state
+      const timer = setTimeout(() => {
+        console.log("timer started");
+
+        setScore(score + points[difficulty]);
+        setStreak(streak + 1);
+        setCorrectCount(correctCount + 1);
+        
+        setCounter(counter + 1);
+      }, 1000)
+      // clearTimeout(timer);
     } else {
-      setScore(score - 50);
-      setStreak(0);
+      // Set active state first
+      e.target.parentElement.className = "answer incorrect";
+      // Then try timeout function to set state
+      const timer = setTimeout(() => {
+        console.log("timer started");
+        
+        setScore(score - 50);
+        setStreak(0);
+
+        setCounter(counter + 1);
+      }, 1000);
+      // clearTimeout(timer);
     }
-    setCounter(counter + 1);
+    
+    // // PREVIOUS CODE WITH OUT TIMER
+    // if(selectedAnswer === correct_answer) {
+    //   setScore(score + points[difficulty]);
+    //   setStreak(streak + 1);
+    //   setCorrectCount(correctCount + 1);
+    // } else {
+    //   setScore(score - 50);
+    //   setStreak(0);
+    // }
+    // setCounter(counter + 1);
+
   }
 
   const answers = answersArray.map((answer) => {
     return (
-      <div className="answer" key={answer} onClick={() => handleClick(answer)}>
-        <p>{answer}</p>
+      <div className="answer" key={answer} onClick={(e) => handleClick(answer, e)}>
+        {/* <p>{answer}</p> */}
+        <p dangerouslySetInnerHTML={{ __html: answer }} />
       </div>
     );
   })
@@ -46,14 +84,22 @@ const Question = (props) => {
   // FIXME: html codes not displaying properly
   return (
     <section className="question-section">
-      <p><span>Category: </span>{category}</p>
-      <h2 className="question">{question}</h2>
-      <div className="answers">
-        {answers}
-      </div>
+      <p>
+        <span>Category: </span>
+        {category}
+      </p>
+      {/* <h2 className="question">{question}</h2> */}
+
+      {/* <h2 className="question">
+        <div dangerouslySetInnerHTML={{ __html: question }} />
+      </h2> */}
+
+      <h2 dangerouslySetInnerHTML={{ __html: question }} className="question" />
+
+      <div className="answers">{answers}</div>
       <p>Question: {counter}</p>
     </section>
-  )
+  );
 }
 
 export default Question;

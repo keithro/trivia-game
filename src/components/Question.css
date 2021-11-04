@@ -1,0 +1,9 @@
+
+
+.answer.correct {
+  background-color: rgb(154, 212, 195);
+}
+
+.answer.incorrect {
+  background-color: rgb(231, 157, 175);
+}

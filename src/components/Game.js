@@ -11,8 +11,8 @@ const Game = (props) => {
   const [counter, setCounter] = useState(0);
   // COMBINE INTO ONE OBJ: score, streak, correctCount
   const [score, setScore] = useState(0);
-  const [streak, setStreak] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
+  // const [streak, setStreak] = useState(0);
 
   const { quizCategory, quizDifficulty } = props.userPreferences;
 
@@ -22,9 +22,22 @@ const Game = (props) => {
     url += quizCategory && `&category=${quizCategory}`;
     url += quizDifficulty && `&difficulty=${quizDifficulty}`;
     
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setQuizData(data.results));
+    // fetch(url)
+    //   .then((res) => res.json())
+    //   .then((data) => setQuizData(data.results));
+
+    const fetchData = async (url) => {
+      await fetch(url)
+        .then((res) => res.json())
+        .then((data) => setQuizData(data.results))
+        .catch((e) => console.error(e));
+    };
+
+    const timer = setTimeout(() => {
+      fetchData(url);
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   // RENDERING COMPONENTS
@@ -50,7 +63,7 @@ const Game = (props) => {
         <div className="game">
           <nav className="game-nav">
             <p>{score} Points</p>
-            {streak >= 3 && <h4>You are on a {streak} question streak!</h4>}
+            {/* {streak >= 3 && <h4>You are on a {streak} question streak!</h4>} */}
             <Link to="/">Quit</Link>
           </nav>
           <main>
@@ -60,8 +73,8 @@ const Game = (props) => {
               setCounter={setCounter}
               score={score}
               setScore={setScore}
-              streak={streak}
-              setStreak={setStreak}
+              // streak={streak}
+              // setStreak={setStreak}
               correctCount={correctCount}
               setCorrectCount={setCorrectCount}
             />
