@@ -86,6 +86,7 @@ const Game = (props) => {
           counter={counter}
           score={score}
           correctCount={correctCount}
+          // location={"results"}
         />
       )}
     </>

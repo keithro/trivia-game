@@ -4,31 +4,61 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: stretch;
+}
+/* 
+.home .nav {
+  flex: 0 0 5vh;
+  align-self: stretch;
+  padding: 0 0.8rem;
+
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
-.home .nav {
-  align-self: stretch;
+.home .nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 .8rem;
 }
 
-.home h1 {
-  position: relative;
-  font-size: 4rem;
+.home .nav a:hover,
+.home .nav a:active {
+  color: #e9d7fa;
+} */
+
+.home main {
+  flex: 1 1 95vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home main h1 {
+  /* I don't think I need position: relative */
+  /* position: relative; */
+  font-size: 4.8rem;
   letter-spacing: 1.6rem;
-  margin: .8rem;
-  /* color: pink; */
+  margin-bottom: .8rem;
 }
 
-.home span {
+.home main span {
   display: inline-block;
 }
 
-.home .tilt-right {
+.home main .tilt-right {
   transform: rotate(10deg);
 }
 
-.home .tilt-left {
+.home main .tilt-left {
   transform: rotate(-10deg);
+}
+
+.home main p {
+  font-family: 'Roboto', sans-serif;
+  color: #e9d7fa;
 }
 
 .home .options-container {
@@ -36,4 +66,12 @@
 
   display: flex;
   flex-direction: column;
+}
+
+.home .options-container label {
+  
+}
+
+.home .options-container select {
+
 }

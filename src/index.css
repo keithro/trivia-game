@@ -13,15 +13,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  @media screen and (min-width: 768px) {
-    html {
-      font-size: 56.25%; /* setting 1rem = 9px (9px / 16px) */
-    }
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 56.25%; /* setting 1rem = 9px (9px / 16px) */
   }
+}
 
-  @media screen and (min-width: 1028px) {
-    html {
-      font-size: 62.5%; /* setting 1rem = 10px */
-    }
+@media screen and (min-width: 1028px) {
+  html {
+    font-size: 62.5%; /* setting 1rem = 10px */
   }
+}

@@ -1,3 +1,5 @@
+# NOTES
+
 ## API
 
 Example:
@@ -14,7 +16,7 @@ Options:
 ## Back end?
 - [serverless database tut](https://www.freecodecamp.org/news/how-to-add-a-serverless-database-to-react-projects-and-web-apps/)
 - [using Easybase tut](https://easybase.io/react-database-app-tutorial/)
-- [Using Google Sheets]()
+- [Using Google Sheets](https://git.generalassemb.ly/krodriguez/Google-Sheets-Backend)
 
 ## Steps
 - Home page renders user prefernce form
@@ -31,10 +33,11 @@ Options:
 
 ## Other Todos
 - Add streak back (use active class? so it only renders for a few seconds)
+- Spruce up Loader
 - Add about and leaderboard (even if it is fake data)
-- 
 - Remove fonts, images, etc that you don't use
 - Fix Home/Nav layout
+- Deploy!!!
 - Favicon
 
 ## Need Help

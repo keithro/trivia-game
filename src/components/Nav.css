@@ -1,0 +1,41 @@
+
+.nav {
+  /* TODO: delete height if always in flex container */
+  height: 5vh;
+  flex: 0 0 5vh;
+  align-self: stretch;
+  padding: 0 0.8rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .logo {
+  margin: 0 .8rem;
+  letter-spacing: .8rem;
+  /* position: relative; */
+}
+
+.nav .logo span {
+  display: inline-block;
+}
+
+.nav .logo .tilt-right {
+  transform: rotate(10deg);
+}
+
+.nav .logo .tilt-left {
+  transform: rotate(-10deg);
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 .8rem;
+}
+
+.nav a:hover,
+.nav a:active {
+  color: #e9d7fa;
+}

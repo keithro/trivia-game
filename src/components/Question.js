@@ -34,8 +34,6 @@ const Question = (props) => {
       e.target.parentElement.className = "answer correct";
       // Then try timeout function to set state
       const timer = setTimeout(() => {
-        console.log("timer started");
-
         setScore(score + points[difficulty]);
         setStreak(streak + 1);
         setCorrectCount(correctCount + 1);
@@ -48,8 +46,6 @@ const Question = (props) => {
       e.target.parentElement.className = "answer incorrect";
       // Then try timeout function to set state
       const timer = setTimeout(() => {
-        console.log("timer started");
-        
         setScore(score - 50);
         setStreak(0);
 
@@ -58,7 +54,7 @@ const Question = (props) => {
       // clearTimeout(timer);
     }
     
-    // // PREVIOUS CODE WITH OUT TIMER
+    // // PREVIOUS CODE WITHOUT TIMER
     // if(selectedAnswer === correct_answer) {
     //   setScore(score + points[difficulty]);
     //   setStreak(streak + 1);
@@ -80,8 +76,6 @@ const Question = (props) => {
     );
   })
   
-  
-  // FIXME: html codes not displaying properly
   return (
     <section className="question-section">
       <p>
@@ -89,10 +83,6 @@ const Question = (props) => {
         {category}
       </p>
       {/* <h2 className="question">{question}</h2> */}
-
-      {/* <h2 className="question">
-        <div dangerouslySetInnerHTML={{ __html: question }} />
-      </h2> */}
 
       <h2 dangerouslySetInnerHTML={{ __html: question }} className="question" />
 

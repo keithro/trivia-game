@@ -24,13 +24,25 @@ const Home = (props) => {
 
   return (
     <div className="home">
-
-      {/* DONE: Move Nav outside main element and wrap all in div.home */}
-      {/* TODO: Nav {flex: 0 0 5vh} main {flex: 1 1 95vh, move other flex properties inside this container element} */}
-      <Nav />
+      <Nav location={'home'} />
 
       <main>
         <h1>
+          <span className="tilt-left">T</span>
+          <span className="tilt-right">R</span>
+          <span className="tilt-left">I</span>
+          <span className="tilt-right">V</span>
+          <span className="tilt-left">I</span>
+          <span className="tilt-right">A</span>
+        </h1>
+        <h1>
+          <span className="tilt-right">C</span>
+          <span className="tilt-left">A</span>
+          <span className="tilt-right">N</span>
+          <span className="tilt-left">D</span>
+          <span className="tilt-right">Y</span>
+        </h1>
+        {/* <h1>
           <span className="tilt-left">L</span>
           <span className="tilt-right">E</span>
           <span className="tilt-left">T'</span>
@@ -42,7 +54,7 @@ const Home = (props) => {
           <span className="tilt-right">A</span>
           <span className="tilt-left">Y</span>
           <span className="tilt-right">!</span>
-        </h1>
+        </h1> */}
         <p>Select a category and difficulty level then click "begin"!</p>
 
         <div className="options-container">
@@ -95,7 +107,7 @@ const Home = (props) => {
 
           {/* <button onSubmit={handleSubmit}>Begin!</button> */}
           <Link to="/game" className="begin-game-btn">
-            Begin!
+            Let's Play!
           </Link>
         </div>
       </main>

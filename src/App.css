@@ -1,8 +1,15 @@
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
   
   font-family: 'Bebas Neue', sans-serif;
   /* font-family: 'Oswald', sans-serif; */
   /* font-family: 'Antonio', sans-serif; */
   /* font-family: 'Roboto', sans-serif; */
+
+  background: #8187dc;
+  background: linear-gradient(156deg, rgba(187,173,255,1) 0%, rgba(129,135,220,1) 28%, rgba(110,115,190,1) 80%,  rgb(97, 102, 175) 100%);
+  color: #ffffff;
+  /* color: #e9d7fa; */
 }
