@@ -2,14 +2,17 @@ import { useEffect, useState } from "react";
 import { Route, Link } from "react-router-dom";
 import Loader from './Loader';
 import Question from './Question';
+import Results from './Results';
 
 import "./Game.css";
 
 const Game = (props) => {
-  // STATES: counter, quizData, score, streak
   const [quizData, setQuizData] = useState(null);
   const [counter, setCounter] = useState(0);
+  // COMBINE INTO ONE OBJ: score, streak, correctCount
   const [score, setScore] = useState(0);
+  const [streak, setStreak] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
 
   const { quizCategory, quizDifficulty } = props.userPreferences;
 
@@ -46,7 +49,8 @@ const Game = (props) => {
       ) : counter < quizData.length ? (
         <div className="game">
           <nav className="game-nav">
-            <h4>{score} Points</h4>
+            <p>{score} Points</p>
+            {streak >= 3 && <h4>You are on a {streak} question streak!</h4>}
             <Link to="/">Quit</Link>
           </nav>
           <main>
@@ -56,12 +60,20 @@ const Game = (props) => {
               setCounter={setCounter}
               score={score}
               setScore={setScore}
+              streak={streak}
+              setStreak={setStreak}
+              correctCount={correctCount}
+              setCorrectCount={setCorrectCount}
             />
             {/* <h4>Current score: {score}</h4> */}
           </main>
         </div>
       ) : (
-        <h1>Results Page!</h1>
+        <Results
+          counter={counter}
+          score={score}
+          correctCount={correctCount}
+        />
       )}
     </>
   );
