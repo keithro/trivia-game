@@ -1,5 +1,5 @@
 html {
-  font-size: 50%; /* seting 1rem = 8px (8px / 16px) */
+  font-size: 50%; /* seting 1rem = 8px (16px * 50%) */
 
 }
 

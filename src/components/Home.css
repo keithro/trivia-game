@@ -30,18 +30,35 @@
 
 .home main {
   flex: 1 1 95vh;
+  padding: 0 1rem 10rem 1rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.home .big-logo {
+  margin-bottom: 4rem;
+}
 .home main h1 {
   /* I don't think I need position: relative */
   /* position: relative; */
-  font-size: 4.8rem;
-  letter-spacing: 1.6rem;
+  font-size: 8rem;
+  letter-spacing: 2.4rem;
   margin-bottom: .8rem;
+
+  color: rgba(129,135,220,1);
+  text-shadow: 1px 1px 0px #fff,
+               2px 2px 0px #fff,
+               3px 3px 0px #fff,
+               4px 4px 0px #fff,
+               5px 5px 0px #fff,
+               6px 6px 0px #fff,
+               7px 7px 0px #fff,
+               8px 8px 0px #fff,
+               9px 9px 0px #fff,
+               10px 10px 0px #fff;
 }
 
 .home main span {
@@ -49,15 +66,20 @@
 }
 
 .home main .tilt-right {
-  transform: rotate(10deg);
+  /* transform: rotate(10deg); */
+  transform: rotate(10deg) translateY(-.5rem);
+  animation: moveDown 2s linear infinite;
 }
 
 .home main .tilt-left {
-  transform: rotate(-10deg);
+  /* transform: rotate(-10deg); */
+  transform: rotate(-10deg) translateY(.5rem);
+  animation: moveUp 2s linear infinite;
 }
 
 .home main p {
   font-family: 'Roboto', sans-serif;
+  font-size: 2.4rem;
   color: #e9d7fa;
 }
 
@@ -69,9 +91,40 @@
 }
 
 .home .options-container label {
-  
+  margin: 1.8rem 0 .2rem 1.6rem;
+  align-self: flex-start;
 }
 
 .home .options-container select {
+  padding: 1rem;
+  border-radius: 3rem;
+  appearance: none;
+  outline: none;
+}
 
+.home .options-container a {
+  font-size: 2rem;
+  background-color: #e0c3fc;
+  color: #333;
+  text-decoration: none;
+  margin-top: 4rem;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+
+.home .options-container a:hover,
+.home .options-container a:active {
+  background-color: #dab6fc;
+}
+
+@keyframes moveDown {
+  50% {
+    transform: rotate(10deg) translateY(.5rem);
+  }
+}
+
+@keyframes moveUp {
+  50% {
+    transform: rotate(-10deg) translateY(-.5rem);
+  }
 }

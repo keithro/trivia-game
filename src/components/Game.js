@@ -29,8 +29,8 @@ const Game = (props) => {
     const fetchData = async (url) => {
       await fetch(url)
         .then((res) => res.json())
-        .then((data) => console.log(data.results))
-        // .then((data) => setQuizData(data.results))
+        // .then((data) => console.log(data.results))
+        .then((data) => setQuizData(data.results))
         .catch((e) => console.error(e));
     };
 

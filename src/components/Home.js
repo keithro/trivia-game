@@ -27,35 +27,37 @@ const Home = (props) => {
       <Nav location={'home'} />
 
       <main>
-        <h1>
-          <span className="tilt-left">T</span>
-          <span className="tilt-right">R</span>
-          <span className="tilt-left">I</span>
-          <span className="tilt-right">V</span>
-          <span className="tilt-left">I</span>
-          <span className="tilt-right">A</span>
-        </h1>
-        <h1>
-          <span className="tilt-right">C</span>
-          <span className="tilt-left">A</span>
-          <span className="tilt-right">N</span>
-          <span className="tilt-left">D</span>
-          <span className="tilt-right">Y</span>
-        </h1>
-        {/* <h1>
-          <span className="tilt-left">L</span>
-          <span className="tilt-right">E</span>
-          <span className="tilt-left">T'</span>
-          <span className="tilt-right">S</span>
-        </h1>
-        <h1>
-          <span className="tilt-right">P</span>
-          <span className="tilt-left">L</span>
-          <span className="tilt-right">A</span>
-          <span className="tilt-left">Y</span>
-          <span className="tilt-right">!</span>
-        </h1> */}
-        <p>Select a category and difficulty level then click "begin"!</p>
+        <div className="big-logo">
+          <h1>
+            <span className="tilt-left">T</span>
+            <span className="tilt-right">R</span>
+            <span className="tilt-left">I</span>
+            <span className="tilt-right">V</span>
+            <span className="tilt-left">I</span>
+            <span className="tilt-right">A</span>
+          </h1>
+          <h1>
+            <span className="tilt-right">C</span>
+            <span className="tilt-left">A</span>
+            <span className="tilt-right">N</span>
+            <span className="tilt-left">D</span>
+            <span className="tilt-right">Y</span>
+          </h1>
+          {/* <h1>
+            <span className="tilt-left">L</span>
+            <span className="tilt-right">E</span>
+            <span className="tilt-left">T'</span>
+            <span className="tilt-right">S</span>
+          </h1>
+          <h1>
+            <span className="tilt-right">P</span>
+            <span className="tilt-left">L</span>
+            <span className="tilt-right">A</span>
+            <span className="tilt-left">Y</span>
+            <span className="tilt-right">!</span>
+          </h1> */}
+        </div>
+        <p>Select a category and difficulty level then let's begin!</p>
 
         <div className="options-container">
           <label for="quizCategory">Category</label>
