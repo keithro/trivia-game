@@ -33,10 +33,7 @@ Options:
 
 ## Other Todos
 - Add streak back (use active class? so it only renders for a few seconds)
-- Spruce up Loader
-- Add about and leaderboard (even if it is fake data)
 - Remove fonts, images, etc that you don't use
-- Fix Home/Nav layout
 - Deploy!!!
 - Favicon
 
@@ -46,4 +43,6 @@ Options:
 ## Done
 - How to render html codes (in quizData.question) correctly
 - How can you display answer feedback (correct/incorrect)? 
-
+- Spruce up Loader
+- Add about and leaderboard (even if it is fake data)
+- Fix Home/Nav layout

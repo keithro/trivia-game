@@ -3,7 +3,7 @@
 ## Project Links
 
 - [github repo link](https://github.com/keithro/trivia-game)
-- [add your deployment link]()
+- [keithrodriguez.me/trivia-game](http://www.keithrodriguez.me/trivia-game/)
 
 ## Project Description
 
