@@ -63,7 +63,7 @@ const Game = (props) => {
       ) : counter < quizData.length ? (
         <div className="game">
           <nav className="game-nav">
-            <p>{score} Points</p>
+            <p className="score">{score} Points</p>
             {/* {streak >= 3 && <h4>You are on a {streak} question streak!</h4>} */}
             <Link to="/">Quit</Link>
           </nav>

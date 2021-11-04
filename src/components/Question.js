@@ -78,10 +78,7 @@ const Question = (props) => {
   
   return (
     <section className="question-section">
-      <p>
-        <span>Category: </span>
-        {category}
-      </p>
+      <p className="category"><span>Category: </span>{category}</p>
       {/* <h2 className="question">{question}</h2> */}
 
       <h2 dangerouslySetInnerHTML={{ __html: question }} className="question" />

@@ -81,6 +81,7 @@
   font-family: 'Roboto', sans-serif;
   font-size: 2.4rem;
   color: #e9d7fa;
+  /* color: #f3bcd6; */
 }
 
 .home .options-container {
@@ -102,19 +103,21 @@
   outline: none;
 }
 
-.home .options-container a {
+.home .options-container .begin-game-btn {
   font-size: 2rem;
   background-color: #e0c3fc;
-  color: #333;
+  /* background-color: #f3bcd6; */
+  color: #5e5e5e;
   text-decoration: none;
   margin-top: 4rem;
   padding: 1rem;
   border-radius: 3rem;
 }
 
-.home .options-container a:hover,
-.home .options-container a:active {
+.home .options-container .begin-game-btn:hover,
+.home .options-container .begin-game-btn:active {
   background-color: #dab6fc;
+  color: #444;
 }
 
 @keyframes moveDown {

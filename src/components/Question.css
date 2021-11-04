@@ -1,5 +1,30 @@
+.question-section {
+  padding: 1rem;
+}
 
+.question-section .category {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  color: #e9d7fa;
+}
 
+.question-section .category span {
+  font-weight: 700;
+}
+
+.question-section .question {
+  font-size: 3.6rem;
+}
+
+/* .question-section .answers {
+  padding: 1rem;
+} */
+
+.answer {
+  color: #5e5e5e;
+  background-color: #fff;
+  padding: 1rem;
+}
 .answer.correct {
   background-color: rgb(154, 212, 195);
 }

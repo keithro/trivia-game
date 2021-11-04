@@ -1,7 +1,30 @@
-
-
-.game-nav {
-  display: flex;
-  justify-content: space-between;
+.game {
+  height: 100%;
 }
 
+.game-nav {
+  height: 10vh;
+  /* flex: 0 0 10vh; */
+  padding: 0 2rem;
+  font-size: 2.2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .game-nav .score {
+  color: #757bc8;
+} */
+
+.game-nav a {
+  color: #757bc8;
+  background-color: #fff;
+  padding: .8rem 1.6rem;
+  border-radius: 4rem;
+  text-decoration: none;
+}
+
+.game-nav a:hover {
+  background-color: #eee;
+}
