@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
-
 import Nav from './Nav';
 import "./Results.css";
 
 const Results = (props) => {
-  console.log(props);
-  
   const {counter, score, correctCount} = props;
+
+  // CONFETTI
+  // create 100+ confetti of random colors from array
+  // position at top: 0, right: width * Math.random()
+  // animate with random delay distance of window height
 
   return (
     <div className="results">

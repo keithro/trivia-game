@@ -17,10 +17,19 @@
 .about .about-container h1 {
   font-size: 5rem;
   margin-top: 2rem;
+  text-shadow: 1px 1px 0px #5e5e5e,
+               2px 2px 0px #5e5e5e,
+               3px 3px 0px #5e5e5e,
+               4px 4px 0px #5e5e5e,
+               5px 5px 0px #5e5e5e;
 }
 
 .about .about-container h2 {
   margin-top: 2rem;
+}
+
+.about .about-container p {
+  line-height: 3.2rem;
 }
 
 .about .about-container>.scoring {
