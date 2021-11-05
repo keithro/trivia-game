@@ -1,0 +1,33 @@
+.about .about-container {
+  max-width: 100rem;
+  padding: 2rem;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2rem;
+  color: #e9d7fa;
+  text-align: left;
+}
+
+.about .about-container h1,
+.about .about-container h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #fff;
+}
+
+.about .about-container h1 {
+  font-size: 5rem;
+  margin-top: 2rem;
+}
+
+.about .about-container h2 {
+  margin-top: 2rem;
+}
+
+.about .about-container>.scoring {
+  margin-left: 1rem;
+}
+
+.about .about-container .scoring {
+  color: #fff;
+  font-weight: 700;
+}

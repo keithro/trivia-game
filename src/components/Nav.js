@@ -1,14 +1,10 @@
 import { Link } from "react-router-dom";
-
 import "./Nav.css";
 
 const Nav = (props) => {
-  console.log(props);
-  
   return (
     <nav className="nav">
       <div className="logo">
-        {/* {props.location !== "home" && <h4>Trivia Candy</h4>} */}
         {props.location !== "home" && (
           <Link to="/">
             <h4>
@@ -19,7 +15,6 @@ const Nav = (props) => {
               <span className="tilt-left">I</span>
               <span className="tilt-right">A</span>
             </h4>
-              {/* <span className="tilt-left"> </span> */}
             <h4>
               <span className="tilt-right">C</span>
               <span className="tilt-left">A</span>
@@ -31,9 +26,6 @@ const Nav = (props) => {
         )}
       </div>
       <div className="nav-links">
-        {/* <Link to="/">Home</Link> */}
-        {/* <Link to="/about">About</Link> */}
-        {/* <Link to="/leaderboard">Leaderboard</Link> */}
         {props.location !== "home" && <Link to="/">Home</Link>}
         {props.location !== "about" && <Link to="/about">About</Link>}
         {props.location !== "leaderboard" && (
