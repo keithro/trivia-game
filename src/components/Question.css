@@ -39,7 +39,7 @@
   height: 8rem;
   flex: 1 1 45rem;
   cursor: pointer;
-  animation: background-color 800ms ease-in-out;
+  animation: background-color 5000ms ease-in-out;
 
   display: flex;
   justify-content: center;
