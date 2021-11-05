@@ -38,7 +38,8 @@
   font-size: 2.2rem;
   height: 8rem;
   flex: 1 1 45rem;
-  padding: 1rem;
+  cursor: pointer;
+  animation: background-color 800ms ease-in-out;
 
   display: flex;
   justify-content: center;
@@ -50,16 +51,31 @@
 }
 
 .question-section .answer.correct {
-  background-color: #b7e4d1;
+  background-color: #bceee1;
 }
 
 .question-section .answer.incorrect {
-  background-color: #f5aec1;
+  background-color: #f7b5c7;
+  animation: shake .3s;
+}
+  
+.question-section .answer p {
+  height: 100%;
+  width: 100%;
+  line-height: 8rem;
 }
 
 .question-section .question-count {
   font-size: 1.8rem;
   margin-top: 2.4rem;
+}
+
+@keyframes shake {
+  20% { transform: translate(1px, 0); }
+  40% { transform: translate(-2px, 0); }
+  60% { transform: translate(2px, 0); }
+  80% { transform: translate(-1px, 0); }
+  100% { transform: translate(0px, 0); }
 }
 
 @media screen and (min-width: 768px) {
@@ -76,7 +92,10 @@
   .question-section .answer {
     height: 10rem;
     flex: 1 1 calc(50% - 1rem);
-    cursor: pointer;
+  }
+  
+  .question-section .answer p {
+    line-height: 10rem;
   }
 
   .question-section .question-count {
