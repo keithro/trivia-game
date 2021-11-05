@@ -1,0 +1,83 @@
+.results {
+  padding: 2rem 1rem;
+}
+
+.results .results-container {
+  padding: 2rem 0;
+}
+
+.results .results-container h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2rem;
+  color: #e9d7fa;
+  margin-bottom: 2.4rem;
+}
+
+.results .results-container .display-correct,
+.results .results-container .display-count {
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.results .results-container .display-score {
+  font-size: 10rem;
+  margin-bottom: 1.6rem;
+  line-height: 100%;
+  text-shadow: 1px 1px 0px #5e5e5e,
+               2px 2px 0px #5e5e5e,
+               3px 3px 0px #5e5e5e,
+               4px 4px 0px #5e5e5e,
+               5px 5px 0px #5e5e5e,
+               6px 6px 0px #5e5e5e,
+               7px 7px 0px #5e5e5e,
+               8px 8px 0px #5e5e5e,
+               9px 9px 0px #5e5e5e,
+               10px 10px 0px #5e5e5e;
+}
+
+.results .results-container h2 {
+  font-size: 8rem;
+  color: #e9d7fa;
+  margin-bottom: 3.4rem;
+}
+
+.results .play-again-btn {
+  color: #5e5e5e;
+  background-color: #fff;
+  /* font-size: 2.8rem; */
+  padding: 1.2rem 2.4rem;
+  border-radius: 4rem;
+  text-decoration: none;
+}
+
+.results .play-again-btn:hover {
+  background-color: #eee;
+}
+
+@media screen and (min-width: 768px) {
+  .results .results-container h4 {
+    font-size: 2.8rem;
+    margin-bottom: 3.6rem;
+  }
+
+  .results .results-container .display-correct,
+  .results .results-container .display-count {
+    font-size: 3.4rem;
+  }
+
+  .results .results-container .display-score {
+    font-size: 14rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  .results .results-container h2 {
+    font-size: 10rem;
+    margin-bottom: 6rem;
+  }
+
+  .results .play-again-btn {
+    font-size: 2.8rem;
+    padding: 2.4rem 3.6rem;
+  }
+}

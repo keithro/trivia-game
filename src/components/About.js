@@ -1,4 +1,5 @@
 import Nav from "./Nav";
+import "./About.css";
 
 const About = () => {
 

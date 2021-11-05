@@ -1,6 +1,8 @@
 # NOTES
 
 ## Deploying
+http://www.keithrodriguez.me/trivia-game/
+
 To deploy run: 
 ```
 npm run deploy

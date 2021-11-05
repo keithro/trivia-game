@@ -25,8 +25,8 @@
   letter-spacing: 2.4rem;
   margin-bottom: .8rem;
 
-  color: #8187dc;
-  text-shadow: 1px 1px 0px #fff,
+  /* color: #8187dc; */
+  /* text-shadow: 1px 1px 0px #fff,
                2px 2px 0px #fff,
                3px 3px 0px #fff,
                4px 4px 0px #fff,
@@ -35,7 +35,7 @@
                7px 7px 0px #fff,
                8px 8px 0px #fff,
                9px 9px 0px #fff,
-               10px 10px 0px #fff;
+               10px 10px 0px #fff; */
 
   color: #fff;
   text-shadow: 1px 1px 0px #5e5e5e,
