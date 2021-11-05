@@ -87,20 +87,21 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Planning and wireframing | H | 4hrs| 6hrs | 6hrs |
 | Project Worksheet | H | 2hrs| 2.5hrs | 2.5hrs |
 | Adding Home component and inputs | H | 3hrs| hrs | hrs |
-| Working with API | H | 3hrs| hrs | hrs |
-| Game component and rendering Question and Ansers | H | 3hrs| hrs | hrs |
-| Game logic: comparing user answer to correct answer and incrementing/decrementing score | H | 4hrs| hrs | hrs |
+| Working with API | H | 3hrs| 3.5hrs | 3.5hrs |
+| Game component and rendering Question and Ansers | H | 3hrs| 6hrs | 6hrs |
+| Game logic: comparing user answer to correct answer and incrementing/decrementing score | H | 4hrs| 3hrs | 3hrs |
 | Displaying correct answer | H | 2hrs| hrs | hrs |
-| Rendering final game results (score, number of correct answers) | H | 2hrs| hrs | hrs |
-| Style and make responsive | H | 6hrs| hrs | hrs |
+| Rendering final game results (score, number of correct answers) | H | 2hrs| 3hrs | 3hrs |
+| Style and make responsive | H | 6hrs| 8hrs | 8hrs |
 | Total | H | 33hrs| hrs | hrs |
 
 #### Post MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Loading screen | H | 3hrs| hrs | hrs |
-| User correct answer streak | L | 3hrs| hrs | hrs |
+| Loading screen | H | 3hrs| 4hrs | 4hrs |
+| User correct answer streak | L | 3hrs| 2hrs | 2hrs |
 | Score Leaderboard | H | 6hrs| hrs | hrs |
+| Make Favicon | H | 3hrs| hrs | hrs |
 | Total | H | 12hrs| hrs | hrs |
 
 ## Additional Libraries

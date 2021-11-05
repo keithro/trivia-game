@@ -86,7 +86,7 @@
 }
 
 .home .options-container select {
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 3rem;
   appearance: none;
   outline: none;
@@ -94,7 +94,7 @@
 }
 
 .home .options-container .begin-game-btn {
-  font-size: 2rem;
+  font-size: 2.6rem;
   background-color: #e0c3fc;
   /* background-color: #f3bcd6; */
   color: #5e5e5e;

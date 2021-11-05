@@ -42,9 +42,8 @@ Options:
 - Results page renders score and has links to home, leaderboard, about and button to play again
 
 ## Other Todos
-- Add streak back (use active class? so it only renders for a few seconds)
 - Add shadow to buttons (and answer choices?) + shrink on click
-- Remove fonts, images, etc that you don't use
+- Clean up: Remove fonts, images, etc that you don't use. Delete console.logs and commented code.
 - Favicon
 
 ## Need Help
@@ -57,3 +56,4 @@ Options:
 - Add about and leaderboard (even if it is fake data)
 - Fix Home/Nav layout
 - Deploy!!!
+- Add streak back (use active class? so it only renders for a few seconds)
