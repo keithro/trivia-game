@@ -3,9 +3,6 @@ import {useState} from 'react';
 import "./Question.css";
 
 const Question = (props) => {
-  // const [streak, setStreak] = useState(0);
-  // const {counter, setCounter, score, setScore, correctCount, setCorrectCount, quizData} = props;
-
   const {counter, setCounter, score, setScore, streak, setStreak, correctCount, setCorrectCount, quizData} = props;
   const { category, type, difficulty, question, correct_answer, incorrect_answers } =quizData[counter];
   const answersArray = [correct_answer, ...incorrect_answers];
@@ -19,7 +16,7 @@ const Question = (props) => {
   }
   shuffleArray(answersArray);
   
-  // console.log(quizData);
+  // TODO: Delete me
   console.log(correct_answer);
 
   const handleClick = (selectedAnswer, e) => {
@@ -27,7 +24,6 @@ const Question = (props) => {
     // console.log(selectedAnswer);
     // console.log(correct_answer);
 
-    // NEW CODE WITH TIMER
     if(selectedAnswer === correct_answer) {
       // Set active state first
       e.target.parentElement.className === "answer" ?
@@ -56,24 +52,11 @@ const Question = (props) => {
       }, 1000);
       // clearTimeout(timer);
     }
-    
-    // // PREVIOUS CODE WITHOUT TIMER
-    // if(selectedAnswer === correct_answer) {
-    //   setScore(score + points[difficulty]);
-    //   setStreak(streak + 1);
-    //   setCorrectCount(correctCount + 1);
-    // } else {
-    //   setScore(score - 50);
-    //   setStreak(0);
-    // }
-    // setCounter(counter + 1);
-
   }
 
   const answers = answersArray.map((answer) => {
     return (
       <div className="answer" key={answer} onClick={(e) => handleClick(answer, e)}>
-        {/* <p>{answer}</p> */}
         <p dangerouslySetInnerHTML={{ __html: answer }} />
       </div>
     );
@@ -82,10 +65,7 @@ const Question = (props) => {
   return (
     <section className="question-section">
       <p className="category"><span>Category: </span>{category}</p>
-      {/* <h2 className="question">{question}</h2> */}
-
       <h2 dangerouslySetInnerHTML={{ __html: question }} className="question" />
-
       <div className="answers">{answers}</div>
       <p className="question-count">Question: {counter}</p>
     </section>

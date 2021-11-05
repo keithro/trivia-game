@@ -50,12 +50,10 @@
 }
 
 .question-section .answer.correct {
-  /* background-color: rgb(154, 212, 195); */
   background-color: #b7e4d1;
 }
 
 .question-section .answer.incorrect {
-  /* background-color: rgb(231, 157, 175); */
   background-color: #f5aec1;
 }
 
@@ -73,10 +71,6 @@
   .question-section .question {
     font-size: 4.8rem;
     margin-bottom: 4.8rem;
-  }
-
-  .question-section .answers {
-    /* gap: 1.5rem; */
   }
   
   .question-section .answer {

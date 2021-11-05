@@ -102,7 +102,6 @@ const Game = (props) => {
               correctCount={correctCount}
               setCorrectCount={setCorrectCount}
             />
-            {/* <h4>Current score: {score}</h4> */}
           </main>
         </div>
       ) : (
@@ -110,7 +109,6 @@ const Game = (props) => {
           counter={counter}
           score={score}
           correctCount={correctCount}
-          // location={"results"}
         />
       )}
     </>

@@ -5,8 +5,8 @@ import "./Results.css";
 const Results = (props) => {
   const {counter, score, correctCount} = props;
 
-  // CONFETTI
-  // create 100+ confetti of random colors from array
+  // CONFETTI?
+  // create confetti divs of random colors (chosen from array)
   // position at top: 0, right: width * Math.random()
   // animate with random delay distance of window height
 
