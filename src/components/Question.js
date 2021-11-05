@@ -3,11 +3,10 @@ import {useState} from 'react';
 import "./Question.css";
 
 const Question = (props) => {
-  const [streak, setStreak] = useState(0);
+  // const [streak, setStreak] = useState(0);
+  // const {counter, setCounter, score, setScore, correctCount, setCorrectCount, quizData} = props;
 
-  // const {counter, setCounter, score, setScore, streak, setStreak, correctCount, setCorrectCount, quizData} = props;
-
-  const {counter, setCounter, score, setScore, correctCount, setCorrectCount, quizData} = props;
+  const {counter, setCounter, score, setScore, streak, setStreak, correctCount, setCorrectCount, quizData} = props;
   const { category, type, difficulty, question, correct_answer, incorrect_answers } =quizData[counter];
   const answersArray = [correct_answer, ...incorrect_answers];
   const points = { easy: 100, medium: 200, hard: 300}
@@ -31,7 +30,9 @@ const Question = (props) => {
     // NEW CODE WITH TIMER
     if(selectedAnswer === correct_answer) {
       // Set active state first
-      e.target.parentElement.className = "answer correct";
+      e.target.parentElement.className === "answer" ?
+        e.target.parentElement.className = "answer correct" :
+        e.target.className = "answer correct";
       // Then try timeout function to set state
       const timer = setTimeout(() => {
         setScore(score + points[difficulty]);
@@ -43,7 +44,9 @@ const Question = (props) => {
       // clearTimeout(timer);
     } else {
       // Set active state first
-      e.target.parentElement.className = "answer incorrect";
+      e.target.parentElement.className === "answer" ? 
+        e.target.parentElement.className = "answer incorrect" : 
+        e.target.className = "answer incorrect";
       // Then try timeout function to set state
       const timer = setTimeout(() => {
         setScore(score - 50);
@@ -84,7 +87,7 @@ const Question = (props) => {
       <h2 dangerouslySetInnerHTML={{ __html: question }} className="question" />
 
       <div className="answers">{answers}</div>
-      <p>Question: {counter}</p>
+      <p className="question-count">Question: {counter}</p>
     </section>
   );
 }

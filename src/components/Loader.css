@@ -47,7 +47,7 @@
 .circles {
   height: 6rem;
   transform-origin: bottom center;
-
+  margin-bottom: 10rem;
   animation: rotate 2s linear infinite;
 }
 

@@ -16,6 +16,11 @@
   margin: 0 .8rem;
   letter-spacing: .8rem;
   /* position: relative; */
+  text-shadow: 1px 1px 0px #5e5e5e,
+               2px 2px 0px #5e5e5e,
+               3px 3px 0px #5e5e5e,
+               4px 4px 0px #5e5e5e,
+               5px 5px 0px #5e5e5e;
 }
 
 .nav .logo span {

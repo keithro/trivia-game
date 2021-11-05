@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Loader from './Loader';
 import Question from './Question';
 import Results from './Results';
@@ -12,7 +12,7 @@ const Game = (props) => {
   // COMBINE INTO ONE OBJ: score, streak, correctCount
   const [score, setScore] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
-  // const [streak, setStreak] = useState(0);
+  const [streak, setStreak] = useState(0);
 
   const { quizCategory, quizDifficulty } = props.userPreferences;
 
@@ -29,14 +29,13 @@ const Game = (props) => {
     const fetchData = async (url) => {
       await fetch(url)
         .then((res) => res.json())
-        // .then((data) => console.log(data.results))
         .then((data) => setQuizData(data.results))
         .catch((e) => console.error(e));
     };
 
     const timer = setTimeout(() => {
       fetchData(url);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -63,9 +62,33 @@ const Game = (props) => {
       ) : counter < quizData.length ? (
         <div className="game">
           <nav className="game-nav">
-            <p className="score">{score} Points</p>
-            {/* {streak >= 3 && <h4>You are on a {streak} question streak!</h4>} */}
-            <Link to="/">Quit</Link>
+
+            <div className="logo">
+              <Link to="/">
+                <h4>
+                  <span className="tilt-left">T</span>
+                  <span className="tilt-right">R</span>
+                  <span className="tilt-left">I</span>
+                  <span className="tilt-right">V</span>
+                  <span className="tilt-left">I</span>
+                  <span className="tilt-right">A</span>
+                </h4>
+                <h4>
+                  <span className="tilt-right">C</span>
+                  <span className="tilt-left">A</span>
+                  <span className="tilt-right">N</span>
+                  <span className="tilt-left">D</span>
+                  <span className="tilt-right">Y</span>
+                </h4>
+              </Link>
+            </div>
+
+            <div className="score-display">
+              <p className="score">{score} Points</p>
+              {streak >= 3 && <p className="streak">You are on a {streak} question streak!</p>}
+            </div>
+
+            <Link to="/" className="quit-btn">Quit</Link>
           </nav>
           <main>
             <Question
@@ -74,8 +97,8 @@ const Game = (props) => {
               setCounter={setCounter}
               score={score}
               setScore={setScore}
-              // streak={streak}
-              // setStreak={setStreak}
+              streak={streak}
+              setStreak={setStreak}
               correctCount={correctCount}
               setCorrectCount={setCorrectCount}
             />

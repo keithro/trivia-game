@@ -1,5 +1,13 @@
 # NOTES
 
+## Deploying
+To deploy run: 
+```
+npm run deploy
+```
+
+See [Create React App documentation](https://create-react-app.dev/docs/deployment/#github-pages) or [GitHub docs](https://github.com/gitname/react-gh-pages)
+
 ## API
 
 Example:
@@ -33,8 +41,8 @@ Options:
 
 ## Other Todos
 - Add streak back (use active class? so it only renders for a few seconds)
+- Add shadow to buttons (and answer choices?) + shrink on click
 - Remove fonts, images, etc that you don't use
-- Deploy!!!
 - Favicon
 
 ## Need Help
@@ -46,3 +54,4 @@ Options:
 - Spruce up Loader
 - Add about and leaderboard (even if it is fake data)
 - Fix Home/Nav layout
+- Deploy!!!

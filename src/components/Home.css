@@ -6,27 +6,6 @@
   justify-content: center;
   align-items: stretch;
 }
-/* 
-.home .nav {
-  flex: 0 0 5vh;
-  align-self: stretch;
-  padding: 0 0.8rem;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.home .nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 .8rem;
-}
-
-.home .nav a:hover,
-.home .nav a:active {
-  color: #e9d7fa;
-} */
 
 .home main {
   flex: 1 1 95vh;
@@ -42,13 +21,11 @@
   margin-bottom: 4rem;
 }
 .home main h1 {
-  /* I don't think I need position: relative */
-  /* position: relative; */
-  font-size: 8rem;
+  font-size: 10rem;
   letter-spacing: 2.4rem;
   margin-bottom: .8rem;
 
-  color: rgba(129,135,220,1);
+  color: #8187dc;
   text-shadow: 1px 1px 0px #fff,
                2px 2px 0px #fff,
                3px 3px 0px #fff,
@@ -59,6 +36,18 @@
                8px 8px 0px #fff,
                9px 9px 0px #fff,
                10px 10px 0px #fff;
+
+  color: #fff;
+  text-shadow: 1px 1px 0px #5e5e5e,
+               2px 2px 0px #5e5e5e,
+               3px 3px 0px #5e5e5e,
+               4px 4px 0px #5e5e5e,
+               5px 5px 0px #5e5e5e,
+               6px 6px 0px #5e5e5e,
+               7px 7px 0px #5e5e5e,
+               8px 8px 0px #5e5e5e,
+               9px 9px 0px #5e5e5e,
+               10px 10px 0px #5e5e5e;
 }
 
 .home main span {
@@ -101,6 +90,7 @@
   border-radius: 3rem;
   appearance: none;
   outline: none;
+  background-color: #fff;
 }
 
 .home .options-container .begin-game-btn {

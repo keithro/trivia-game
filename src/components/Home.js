@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Nav from "./Nav";
 import "./Home.css";
@@ -8,18 +8,11 @@ const Home = (props) => {
   const {userPreferences, setUserPreferences} = props;
 
   const handleCategoryChange = (e) => {
-    // console.log(e.target.value);
     setUserPreferences({ ...userPreferences, quizCategory: e.target.value });
   }
 
   const handleDifficultyChange = (e) => {
-    // console.log(e.target.value);
     setUserPreferences({ ...userPreferences, quizDifficulty: e.target.value }); 
-  }
-
-  const handleSubmit = (e) => {
-    console.log(e.target.value);
-    
   }
 
   return (
@@ -43,19 +36,6 @@ const Home = (props) => {
             <span className="tilt-left">D</span>
             <span className="tilt-right">Y</span>
           </h1>
-          {/* <h1>
-            <span className="tilt-left">L</span>
-            <span className="tilt-right">E</span>
-            <span className="tilt-left">T'</span>
-            <span className="tilt-right">S</span>
-          </h1>
-          <h1>
-            <span className="tilt-right">P</span>
-            <span className="tilt-left">L</span>
-            <span className="tilt-right">A</span>
-            <span className="tilt-left">Y</span>
-            <span className="tilt-right">!</span>
-          </h1> */}
         </div>
         <p>Select a category and difficulty level then let's begin!</p>
 
@@ -107,7 +87,6 @@ const Home = (props) => {
             <option value="hard">Hard</option>
           </select>
 
-          {/* <button onSubmit={handleSubmit}>Begin!</button> */}
           <Link to="/game" className="begin-game-btn">
             Let's Play!
           </Link>

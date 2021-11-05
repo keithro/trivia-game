@@ -13,18 +13,58 @@
   align-items: center;
 }
 
-/* .game-nav .score {
-  color: #757bc8;
-} */
+.game-nav .logo {
+  margin: 0 .8rem;
+  letter-spacing: .8rem;
+  margin: 0 .8rem;
+  text-shadow: 1px 1px 0px #5e5e5e,
+               2px 2px 0px #5e5e5e,
+               3px 3px 0px #5e5e5e,
+               4px 4px 0px #5e5e5e,
+               5px 5px 0px #5e5e5e;
+}
 
-.game-nav a {
-  color: #757bc8;
+.game-nav .logo a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.game-nav .logo a:hover,
+.game-nav .logo a:active {
+  color: #e9d7fa;
+}
+
+.game-nav .logo span {
+  display: inline-block;
+}
+
+.game-nav .logo .tilt-right {
+  transform: rotate(10deg);
+}
+
+.game-nav .logo .tilt-left {
+  transform: rotate(-10deg);
+}
+
+.game-nav .score-display {
+  max-width: 23rem;
+}
+
+.game-nav .score-display .streak {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  color: #474747;
+}
+
+.game-nav .quit-btn {
+  color: #5e5e5e;
   background-color: #fff;
   padding: .8rem 1.6rem;
+  margin-left: 3rem;
   border-radius: 4rem;
   text-decoration: none;
 }
 
-.game-nav a:hover {
+.game-nav .quit-btn:hover {
   background-color: #eee;
 }
