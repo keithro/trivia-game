@@ -1,10 +1,10 @@
-import {useState} from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import "./Question.css";
 
 const Question = (props) => {
-  // const [streak, setStreak] = useState(0);
-  // const {counter, setCounter, score, setScore, correctCount, setCorrectCount, quizData} = props;
+  const [answerActive, setAnswerActive] = useState(false);
+  // const answerActive = useRef(false);
 
   const {counter, setCounter, score, setScore, streak, setStreak, correctCount, setCorrectCount, quizData} = props;
   const { category, type, difficulty, question, correct_answer, incorrect_answers } =quizData[counter];
@@ -17,9 +17,10 @@ const Question = (props) => {
       [array[i], array[j]] = [array[j], array[i]];
     }
   }
-  shuffleArray(answersArray);
-  
-  // console.log(quizData);
+
+  useEffect(() => {
+    shuffleArray(answersArray);
+  }, [correct_answer]);
   console.log(correct_answer);
 
   const handleClick = (selectedAnswer, e) => {
@@ -27,52 +28,52 @@ const Question = (props) => {
     // console.log(selectedAnswer);
     // console.log(correct_answer);
 
-    // NEW CODE WITH TIMER
+    setAnswerActive(true);
+    // answerActive.current = true;
+
     if(selectedAnswer === correct_answer) {
-      // Set active state first
-      e.target.parentElement.className === "answer" ?
-        e.target.parentElement.className = "answer correct" :
-        e.target.className = "answer correct";
-      // Then try timeout function to set state
+      // e.target.parentElement.className === "answer" ?
+      //   e.target.parentElement.className = "answer correct" :
+      //   e.target.className = "answer correct";
+
+      // Then use timeout function to set state after delay
       const timer = setTimeout(() => {
         setScore(score + points[difficulty]);
         setStreak(streak + 1);
         setCorrectCount(correctCount + 1);
-        
         setCounter(counter + 1);
-      }, 1000)
+
+        setAnswerActive(false);
+        // answerActive.current = false;
+      }, 3000)
       // clearTimeout(timer);
     } else {
-      // Set active state first
       e.target.parentElement.className === "answer" ? 
         e.target.parentElement.className = "answer incorrect" : 
         e.target.className = "answer incorrect";
-      // Then try timeout function to set state
+
+      // Then use timeout function to set state after delay
       const timer = setTimeout(() => {
         setScore(score - 50);
         setStreak(0);
-
         setCounter(counter + 1);
-      }, 1000);
+
+        setAnswerActive(false);
+        // answerActive.current = false;
+      }, 3000);
       // clearTimeout(timer);
     }
-    
-    // // PREVIOUS CODE WITHOUT TIMER
-    // if(selectedAnswer === correct_answer) {
-    //   setScore(score + points[difficulty]);
-    //   setStreak(streak + 1);
-    //   setCorrectCount(correctCount + 1);
-    // } else {
-    //   setScore(score - 50);
-    //   setStreak(0);
-    // }
-    // setCounter(counter + 1);
-
   }
 
   const answers = answersArray.map((answer) => {
+    // shuffleArray(answersArray);
+
     return (
-      <div className="answer" key={answer} onClick={(e) => handleClick(answer, e)}>
+      <div
+        className={answer === correct_answer ? "answer correct" : "answer"}
+        key={answer}
+        onClick={(e) => handleClick(answer, e)}
+      >
         {/* <p>{answer}</p> */}
         <p dangerouslySetInnerHTML={{ __html: answer }} />
       </div>
@@ -81,12 +82,15 @@ const Question = (props) => {
   
   return (
     <section className="question-section">
-      <p className="category"><span>Category: </span>{category}</p>
+      <p className="category">
+        <span>Category: </span>
+        {category}
+      </p>
       {/* <h2 className="question">{question}</h2> */}
 
       <h2 dangerouslySetInnerHTML={{ __html: question }} className="question" />
 
-      <div className="answers">{answers}</div>
+      <div className={answerActive ? "answers active" : "answers"}>{answers}</div>
       <p className="question-count">Question: {counter}</p>
     </section>
   );

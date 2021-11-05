@@ -49,12 +49,12 @@
   background-color: #eee;
 }
 
-.question-section .answer.correct {
+.question-section .active .answer.correct {
   /* background-color: rgb(154, 212, 195); */
   background-color: #b7e4d1;
 }
 
-.question-section .answer.incorrect {
+.question-section .active .answer.incorrect {
   /* background-color: rgb(231, 157, 175); */
   background-color: #f5aec1;
 }
