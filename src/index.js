@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 // import { BrowserRouter as Router } from 'react-router-dom';
 import { HashRouter as Router } from 'react-router-dom'; // Need to use this rather than BrowserRouter to work after deploying to GitHub Pages
 import './index.css';
-import App from './App';
+import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

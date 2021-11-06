@@ -1,4 +1,4 @@
-{
+const categoryData = {
   trivia_categories: [
     {
       id: 9,
