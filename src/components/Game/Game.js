@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Loader from './Loader';
-import Question from './Question';
-import Results from './Results';
+import Loader from '../Loader/Loader';
+import Question from '../Question/Question';
+import Results from '../Results/Results';
 
 import "./Game.css";
 

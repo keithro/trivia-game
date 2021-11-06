@@ -1,4 +1,4 @@
-import Nav from "./Nav";
+import Nav from "../Nav/Nav";
 import "./About.css";
 
 const About = () => {
