@@ -41,8 +41,15 @@ Options:
 - Once complete render Results page.
 - Results page renders score and has links to home, leaderboard, about and button to play again
 
-## Other Todos
+## Other ToDos
+- Div around home content: background: transparent + shadow
+- About section styling: shadow to section headings
 - Add shadow to buttons (and answer choices?) + shrink on click
+- Answers slide in from left each with slightly longer delay (use nth-child)
+- Things slide in on Home page
+- 
+- Add arrow to drop down lists
+- Try using inner shadow on button or links
 - Clean up: Remove fonts, images, etc that you don't use. Delete console.logs and commented code.
 - Favicon
 
@@ -57,3 +64,4 @@ Options:
 - Fix Home/Nav layout
 - Deploy!!!
 - Add streak back (use active class? so it only renders for a few seconds)
+- Add link to personal page.
