@@ -28,31 +28,22 @@ Options:
 - [using Easybase tut](https://easybase.io/react-database-app-tutorial/)
 - [Using Google Sheets](https://git.generalassemb.ly/krodriguez/Google-Sheets-Backend)
 
-## Steps
-- Home page renders user prefernce form
-- Home page collect user preferences
-- Clicking start redirects to game page
-- Game page will make ajax call
-- Render loader while waiting for response
-- Questions data saved as quizData
-- Game page renders questions and answers based on quizData
-- onClick handler will compare answers and increment or decrement score (points based on difficulty level) and increment counter
-- Repeat for .length of quizData array
-- Once complete render Results page.
-- Results page renders score and has links to home, leaderboard, about and button to play again
 
-## Other ToDos
+## ToDos
+- Add arrow to drop down lists
+- Favicon
+- Google analytics
+- Leaderborad/backend
+- 
 - Div around home content: background: transparent + shadow
-- About section styling: shadow to section headings
 - Add shadow to buttons (and answer choices?) + shrink on click
 - Answers slide in from left each with slightly longer delay (use nth-child)
 - Things slide in on Home page
-- 
-- Add arrow to drop down lists
 - Try using inner shadow on button or links
 - Clean up: Remove fonts, images, etc that you don't use. Delete console.logs and commented code.
-- Favicon
 
+## Done
+- About section styling: shadow to section headings
 ## Need Help
 - Do I need to clear setTimeout in Question component? Doesn't work if I do but logs values multiple times (3 times).
 

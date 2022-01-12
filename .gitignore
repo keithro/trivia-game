@@ -11,6 +11,12 @@
 # production
 /build
 
+
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
+
 # misc
 .DS_Store
 .env.local
