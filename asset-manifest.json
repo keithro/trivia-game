@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/trivia-game/static/css/main.9356df9e.chunk.css",
-    "main.js": "/trivia-game/static/js/main.809f69ee.chunk.js",
-    "main.js.map": "/trivia-game/static/js/main.809f69ee.chunk.js.map",
-    "runtime-main.js": "/trivia-game/static/js/runtime-main.02cb9c82.js",
-    "runtime-main.js.map": "/trivia-game/static/js/runtime-main.02cb9c82.js.map",
-    "static/js/2.1f261e47.chunk.js": "/trivia-game/static/js/2.1f261e47.chunk.js",
-    "static/js/2.1f261e47.chunk.js.map": "/trivia-game/static/js/2.1f261e47.chunk.js.map",
-    "static/js/3.d5bd900a.chunk.js": "/trivia-game/static/js/3.d5bd900a.chunk.js",
-    "static/js/3.d5bd900a.chunk.js.map": "/trivia-game/static/js/3.d5bd900a.chunk.js.map",
+    "main.js": "/trivia-game/static/js/main.4dbfd1a0.chunk.js",
+    "main.js.map": "/trivia-game/static/js/main.4dbfd1a0.chunk.js.map",
+    "runtime-main.js": "/trivia-game/static/js/runtime-main.6a52d379.js",
+    "runtime-main.js.map": "/trivia-game/static/js/runtime-main.6a52d379.js.map",
+    "static/js/2.1fd19d15.chunk.js": "/trivia-game/static/js/2.1fd19d15.chunk.js",
+    "static/js/2.1fd19d15.chunk.js.map": "/trivia-game/static/js/2.1fd19d15.chunk.js.map",
+    "static/js/3.b43e0888.chunk.js": "/trivia-game/static/js/3.b43e0888.chunk.js",
+    "static/js/3.b43e0888.chunk.js.map": "/trivia-game/static/js/3.b43e0888.chunk.js.map",
     "index.html": "/trivia-game/index.html",
     "static/css/main.9356df9e.chunk.css.map": "/trivia-game/static/css/main.9356df9e.chunk.css.map",
-    "static/js/2.1f261e47.chunk.js.LICENSE.txt": "/trivia-game/static/js/2.1f261e47.chunk.js.LICENSE.txt"
+    "static/js/2.1fd19d15.chunk.js.LICENSE.txt": "/trivia-game/static/js/2.1fd19d15.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.02cb9c82.js",
-    "static/js/2.1f261e47.chunk.js",
+    "static/js/runtime-main.6a52d379.js",
+    "static/js/2.1fd19d15.chunk.js",
     "static/css/main.9356df9e.chunk.css",
-    "static/js/main.809f69ee.chunk.js"
+    "static/js/main.4dbfd1a0.chunk.js"
   ]
 }
