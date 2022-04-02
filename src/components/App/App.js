@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
-import Nav from '../Nav/Nav';
+// import Nav from '../Nav/Nav';
 import Home from '../Home/Home';
 import Game from '../Game/Game';
 import About from '../About/About';

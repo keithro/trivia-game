@@ -1,5 +1,3 @@
-import {useState} from 'react';
-
 import "./Question.css";
 
 const Question = (props) => {
@@ -16,7 +14,6 @@ const Question = (props) => {
   } = props;
   const {
     category,
-    type,
     difficulty,
     question,
     correct_answer,
